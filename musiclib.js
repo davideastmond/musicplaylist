@@ -16,7 +16,7 @@ class MusicLibrary {
 
 	printPlayLists() {
 		this.playLists.forEach((plist) => {
-
+			console.log()
 		});
 	}
 }
