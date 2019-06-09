@@ -10,7 +10,6 @@ class MusicLibrary {
 			this.playLists.push(pList);
 		} else {
 			throw new error("Please supply a valid playlist object.");
-			
 		}
 	}
 
@@ -31,7 +30,11 @@ class PlayList {
 		/* 
 		function which will calculate the 
 		rating by averaging the rating of the tracks */
-		
+		let adder = 0;
+		this.tracks.forEach((el) => {
+			adder += el.rating;
+		});
+		return Math.floor(adder / this.tracks.length);
 	}
 
 	totalDuration() {
