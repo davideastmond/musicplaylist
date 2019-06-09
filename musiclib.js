@@ -31,12 +31,19 @@ class PlayList {
 		/* 
 		function which will calculate the 
 		rating by averaging the rating of the tracks */
+		
 	}
 
 	totalDuration() {
 		/* 
 		function which will sum the duration of all of the tracks
 		*/
+		let totalDuration = 0;
+		this.tracks.forEach((track) => {
+			totalDuration += track.length;
+		});
+
+		console.log(`Total duration of all tracks is ${totalDuration} minutes.`);
 	}
 
 	addTrack(pTrack) {
